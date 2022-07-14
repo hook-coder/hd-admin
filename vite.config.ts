@@ -2,7 +2,7 @@
  * @Author: starry
  * @Description: 
  * @LastEditors: starry
- * @LastEditTime: 2022-07-14 16:46:17
+ * @LastEditTime: 2022-07-14 17:24:20
  */
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
