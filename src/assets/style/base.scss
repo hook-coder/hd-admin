@@ -1,0 +1,72 @@
+@import "./variables.scss";
+
+/*-------- 样式 ----------*/
+
+/* 粗体 */
+.fw-bol {
+  font-weight: bold;
+}
+
+/* 删除线 */
+.line-through {
+  text-decoration: line-through;
+}
+
+/* 对齐方式 */
+.align-l {
+  text-align: left;
+}
+.align-c {
+  text-align: center;
+}
+.align-r {
+  text-align: right;
+}
+
+/**----- 间距 -----**/
+.ptb-15 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.plr-15 {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.p-15 {
+  padding: 15px;
+}
+.pl-15 {
+  padding-left: 15px;
+}
+.pr-15 {
+  padding-right: 15px;
+}
+.pt-15 {
+  padding-top: 15px;
+}
+.pb-15 {
+  padding-bottom: 15px;
+}
+.ml-15 {
+  margin-left: 15px;
+}
+.mr-15 {
+  margin-right: 15px;
+}
+.mt-15 {
+  margin-top: 15px;
+}
+.mb-15 {
+  margin-bottom: 15px;
+}
+.mtb-15 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.mlr-15 {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.m-15 {
+  margin: 15px;
+}
