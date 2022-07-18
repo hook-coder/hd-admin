@@ -1,1 +1,1 @@
-import * from './auth'
+export * from "./auth";
