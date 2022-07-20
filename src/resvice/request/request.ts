@@ -8,26 +8,6 @@ interface RequestParam {
   data?: any;
   axiosConfig?: AxiosRequestConfig;
 }
-interface BackendResultConfig {
-  codeKey: string;
-  dataKey: string;
-  msgKey: string;
-  successCode: number | string;
-}
-type RequestResult<T = any> = SuccessResult<T> | FailedResult;
-type SuccessResult<T = any> = {
-  error: null;
-  data: T;
-};
-interface RequestError {
-  type: "axios" | "http" | "backend";
-  code: string | number;
-  errMsg: string;
-}
-type FailedResult = {
-  error: RequestError;
-  data: null;
-};
 
 /**
  * 暴露出一个请求函数
@@ -36,13 +16,13 @@ type FailedResult = {
  */
 export function createRequest(
   axiosConfig: AxiosRequestConfig,
-  backendConfig?: BackendResultConfig
+  backendConfig?: Service.BackendResultConfig
 ) {
   const customInstance = new CustomAxiosInstance(axiosConfig, backendConfig);
 
   async function asyncRequest<T>(
     param: RequestParam
-  ): Promise<RequestResult<T>> {
+  ): Promise<Service.RequestResult<T>> {
     const { url, data, axiosConfig } = param;
     const method = param.method || "get";
     const { instance } = customInstance;
@@ -52,7 +32,7 @@ export function createRequest(
       url,
       data,
       axiosConfig
-    )) as RequestResult<T>;
+    )) as Service.RequestResult<T>;
     return res;
   }
 

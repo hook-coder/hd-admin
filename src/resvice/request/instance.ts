@@ -2,25 +2,15 @@ import axios from "axios";
 import type { AxiosRequestConfig, AxiosInstance, AxiosError } from "axios";
 
 /**
- * 后端返回的数据 用接口定义一下 后期抽离出去！！！
- */
-interface BackendResultConfig {
-  codeKey: string;
-  dataKey: string;
-  msgKey: string;
-  successCode: number | string;
-}
-
-/**
  * 封装axios请求
  * 暴露出一个axios实例类
  */
 export default class CustomAxiosInstance {
   instance: AxiosInstance;
-  backendConfig: BackendResultConfig;
+  backendConfig: Service.BackendResultConfig;
   constructor(
     axiosConfig: AxiosRequestConfig,
-    backendConfig: BackendResultConfig = {
+    backendConfig: Service.BackendResultConfig = {
       codeKey: "code",
       dataKey: "data",
       msgKey: "msg",
